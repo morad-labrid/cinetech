@@ -118,3 +118,105 @@ body {
     width: 306px;
     height: 232px;
 }
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////  PROFIL.PHP */
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////// */
+
+.titre-connexion {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 72px;
+    color: #FFFFFF;
+}
+
+.section-connexion {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.cadre-connexion {
+    width: 529px;
+    height: 542px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 16px;
+}
+
+.cadre-connexion1 {
+    width: 529px;
+    height: 362px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 16px;
+}
+
+.form-connexion {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.ipt {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+
+.input-inscription {
+    margin-top: 35px;
+    width: 291px;
+    height: 55px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 6px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    color: #000000;
+}
+
+.input-inscription::placeholder {
+    text-align: center;
+}
+
+.input-valider {
+    margin-left: 60px;
+    margin-top: 50px;
+    width: 170px;
+    height: 36px;
+    background: rgba(229, 9, 20, 0.9);
+    border: 1px solid black;
+    border-radius: 5px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+.bas-cadre {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.mdp-oublier {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
