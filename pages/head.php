@@ -1,3 +1,9 @@
+<?php
+session_start();
+include("../class//function.php");
+$cinetech = new cinetech();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

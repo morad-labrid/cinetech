@@ -15,18 +15,10 @@
         <div class="info">
             <div class="espace">
                 <div class="nom-prenom-email">
-                    Nom : 
+                    Identifiant : 
                 </div>
                 <div class="information">
-                    Ziane
-                </div>
-            </div>
-            <div class="espace">
-                <div class="nom-prenom-email">
-                    Prénom : 
-                </div>
-                <div class="information">
-                    Nadir
+                    <?= $_SESSION['login'] ?>
                 </div>
             </div>
             <div class="espace">
@@ -34,12 +26,20 @@
                     E-mail : 
                 </div>
                 <div class="information">
-                    machin@machin.com
+                    <?= $_SESSION['email'] ?>
                 </div>
             </div>
-            <form class="form-button" action="" method="">
-                <input class="button-info" type="submit" value="modifier information">
+            <form class="form-button" action="" method="POST">
+                <input class="button-info" name="modif-info" type="submit" value="Modifier information">
             </form>
+            <form class="form-button" action="" method="POST">
+                <input class="button-info" name="deconnect" type="submit" value="Déconnexion">
+            </form>
+            <?php
+                if(isset($_POST['deconnect'])){
+                    $cinetech->deconnect();
+                }
+            ?>
         </div>
         <div class="liste">
             <div class="image-position">
