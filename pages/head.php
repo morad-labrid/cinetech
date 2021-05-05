@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/css/style1.css">
     <link rel="stylesheet" href="../styles/css/header.css">
+    <link rel="stylesheet" href="../styles/css/footer.css">
     <script src="https://kit.fontawesome.com/d34f22fe3f.js" crossorigin="anonymous"></script>
     <meta name="keywords" content="CINETECH°">
     <meta name="description" content="Biblliothèque - Cinetech des films et séries du moment">

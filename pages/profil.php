@@ -1,11 +1,7 @@
 
-<?php 
-require 'head.php';
-?>
+<?php require 'head.php'?>
 <body>
-<?php
-require 'header.php';
-?>
+<?php require 'header.php'?>
 <main>
     <div class="titre-profil">
         <p class="mes-info">
@@ -41,13 +37,20 @@ require 'header.php';
                     machin@machin.com
                 </div>
             </div>
-            <input class="button-info" type="submit" value="modifier information">
+            <form class="form-button" action="" method="">
+                <input class="button-info" type="submit" value="modifier information">
+            </form>
         </div>
         <div class="liste">
             <div class="image-position">
                 <img class="mini-liste" src="../styles/img/image-liste.png" alt="image-de-liste">
             </div>
-            <input class="button-liste" type="submit" value="accèder à ma liste">
+            <form class="form-button" action="" method="">
+                <input class="button-liste" type="submit" value="accèder à ma liste">
+            </form>
         </div>
     </section>
 </main>
+<?php require 'footer.php'?>
+</body>
+</html>
