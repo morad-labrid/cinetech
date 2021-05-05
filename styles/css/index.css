@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: rgb(36, 36, 36);
+    background: linear-gradient(0deg, rgba(36, 36, 36, 1) 0%, rgba(21, 21, 21, 1) 60%);
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* HEADER START */
+
+header {
+    background: rgb(180, 72, 64);
+    background: linear-gradient(180deg, rgba(180, 72, 64, 1) 0%, rgba(21, 21, 21, 0) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+}
+
+header div:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 40px;
+    width: 100%;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul li {
+    margin: 0 10px;
+}
+
+header div:nth-child(2) img {
+    height: 250px;
+    width: auto;
+}
+
+header div:nth-child(2) img:nth-child(2) {
+    height: 400px;
+    width: auto;
+}
+
+header div:nth-child(3) {
+    background-color: white;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    color: black;
+    position: absolute;
+    top: 92%;
+    border: black 1px solid;
+    padding-top: 20px;
+    cursor: pointer;
+}
+
+
+/* HEADER END */
+
+
+/* HOME NEWS START */
+
+.home {
+    margin: 140px 0;
+}
+
+.home section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home section .title {
+    width: 100%;
+    font-size: 30px;
+    padding: 0 6%;
+    margin-bottom: 20px;
+}
+
+.home section .articles {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 6%;
+}
+
+.home section .articles article {
+    width: 250px;
+    background-color: #000000;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.home section .articles article img {
+    width: 100%;
+    height: 300px;
+}
+
+.home section .articles article div:last-child {
+    padding: 6px 20px;
+}
+
+
+/* HOME NEWS END */
+
+footer {
+    padding: 80px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(180, 72, 64);
+    background: linear-gradient(0deg, rgba(180, 72, 64, 1) 0%, #20202000 100%);
+    font-weight: lighter;
+}
+
+footer nav {
+    display: flex;
+}
+
+footer nav ul {
+    margin: 0 10px;
+}
