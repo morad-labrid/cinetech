@@ -6,10 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/css/style.css">
+    <link rel="stylesheet" href="../styles/css/header.css">
+    <link rel="stylesheet" href="../styles/css/footer.css">
     <title>Document</title>
 </head>
 
 <body>
+    <?php include'header.php' ?>
     <main class="element">
         <section class="movie">
             <div>
@@ -130,6 +133,7 @@
             </div>
         </section>
     </main>
+    <?php include'footer.php' ?>
 </body>
 
 </html>
