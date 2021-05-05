@@ -85,43 +85,43 @@ header div:nth-child(3) {
 
 /* HOME NEWS START */
 
-main {
+.home {
     margin: 140px 0;
 }
 
-main section {
+.home section {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-main section .title {
+.home section .title {
     width: 100%;
     font-size: 30px;
     padding: 0 6%;
     margin-bottom: 20px;
 }
 
-main section .articles {
+.home section .articles {
     display: flex;
     justify-content: space-between;
     width: 100%;
     padding: 0 6%;
 }
 
-main section .articles article {
+.home section .articles article {
     width: 250px;
     background-color: #000000;
     border-radius: 16px;
     overflow: hidden;
 }
 
-main section .articles article img {
+.home section .articles article img {
     width: 100%;
     height: 300px;
 }
 
-main section .articles article div:last-child {
+.home section .articles article div:last-child {
     padding: 6px 20px;
 }
 
@@ -144,4 +144,85 @@ footer nav {
 
 footer nav ul {
     margin: 0 10px;
+}
+
+
+/******************** PAGE ELEMENT ********************/
+
+.element .movie {
+    display: flex;
+}
+
+.element .movie img {
+    width: 300px;
+    height: auto;
+    margin-right: 80px;
+}
+
+.element .movie .description {
+    width: 600px;
+    font-weight: 200;
+    font-size: 14px;
+}
+
+.element .movie .date {
+    font-weight: 200;
+    font-size: 14px;
+}
+
+.element .acteur {
+    padding: 0 60px;
+    margin: 100px 0;
+}
+
+.element .acteur article {
+    display: flex;
+}
+
+.element .acteur article nav {
+    margin: 0 20px;
+}
+
+.element .acteur nav div:first-child {
+    width: 90px;
+    height: 90px;
+    background-position: top;
+    background-size: 100%;
+    border-radius: 10px;
+}
+
+.element .avis {
+    background: rgb(180, 72, 64);
+    background: linear-gradient(180deg, rgba(180, 72, 64, 1) 0%, rgba(21, 21, 21, 0) 100%);
+    padding: 40px 60px;
+}
+
+.element .avis div {
+    font-size: 12px;
+}
+
+.element #similaire {
+    padding: 0 6%;
+}
+
+.element section .articles {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.element section .articles article {
+    width: 250px;
+    background-color: #000000;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.element section .articles article img {
+    width: 100%;
+    height: 300px;
+}
+
+.element section .articles article div:last-child {
+    padding: 6px 20px;
 }
