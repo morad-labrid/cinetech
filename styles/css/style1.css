@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: rgb(36, 36, 36);
+    background: linear-gradient(0deg, rgba(36, 36, 36, 1) 0%, rgba(21, 21, 21, 1) 60%);
+    color: white;
+}
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////  PROFIL.PHP */
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////// */
+
+.titre-profil {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 125px;
+}
+
+.mes-info,
+.ma-liste {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 72px;
+    color: #FFFFFF;
+}
+
+.case-profil {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.info {
+    width: 681px;
+    height: 416px;
+    left: 108px;
+    top: 368px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 16px;
+}
+
+.espace {
+    display: flex;
+    margin-top: 50px;
+}
+
+.liste {
+    width: 404px;
+    height: 416px;
+    left: 960px;
+    top: 368px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 16px;
+}
+
+.image-position {
+    display: flex;
+    justify-content: center;
+}
+
+.mini-liste {
+    margin-top: 70px;
+    width: 306px;
+    height: 232px;
+}
