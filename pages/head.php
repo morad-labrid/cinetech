@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("../class//function.php");
+include("../class/function.php");
 $cinetech = new cinetech();
 ?>
 
