@@ -9,25 +9,27 @@
         <?php
         if(isset($_GET['statut']) == 'inscription'){
             $form = '<div class="cadre-connexion">
-                        <form class="form-connexion" action="" method="POST">
+                        <div class="" id="response"></div>
+                        <div class="form-connexion" action="" method="POST">
                             <div class="ipt">
-                                <input class="input-inscription" name="inscription-login" type="text" placeholder="Identifiant">
-                                <input class="input-inscription" name="inscription-email" type="email" placeholder="E-mail">
-                                <input class="input-inscription" name="inscription-password" type="password" placeholder="Mot de passe">
-                                <input class="input-inscription" name="inscription-confirm" type="password" placeholder="Confirmer MDP">
-                                <input class="input-valider" name="inscription" class="input-button" type="submit" value="inscription">
+                                <input class="input-inscription" name="inscription-login" id="inscription-login" type="text" placeholder="Identifiant">
+                                <input class="input-inscription" name="inscription-email" id="inscription-email" type="email" placeholder="E-mail">
+                                <input class="input-inscription" name="inscription-password" id="inscription-password" type="password" placeholder="Mot de passe">
+                                <input class="input-inscription" name="inscription-confirm" id="inscription-confirm" type="password" placeholder="Confirmer MDP">
+                                <input class="input-valider" name="inscription" id="inscription" class="input-button" type="submit" value="inscription">
                             </div>
-                        </form>';
+                        </div>';
         $link = '<a href="connexion.php">Connexion</a>';
         }else{
             $form = '<div class="cadre-connexion1">
-                        <form class="form-connexion" action="" method="POST">
+                     <div class="" id="response"></div>
+                        <div class="form-connexion" action="" method="POST">
                             <div class="ipt">
-                                <input class="input-inscription" name="identifiant" type="text" placeholder="Identifiant">
-                                <input class="input-inscription" name="password" type="password" placeholder="Mot de passe">
-                                <input class="input-valider" name="connexion" class="input-button" type="submit" value="connexion">
+                                <input class="input-inscription" name="identifiant" id="identifiant" type="text" placeholder="Identifiant">
+                                <input class="input-inscription" name="password" id="password" type="password" placeholder="Mot de passe">
+                                <input class="input-valider" name="connexion" class="input-button" type="submit" value="connexion" id="connexion">
                             </div>
-                        </form>';
+                        </div>';
         $link = '<a href="connexion.php?statut=inscription">Inscription</a>';
         }
         ?>

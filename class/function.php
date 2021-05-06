@@ -2,23 +2,17 @@
 
 class cinetech 
 {
-public $_db;
+    private $_db;
 
 
-// ////////////////////////////////////////
-
-
-// ///////////////////////////////////////////////// INSTANCIER CONNEXION A LA BDD
-
-
-// ////////////////////////////////////////
-
-
-
-public function dbconnect(){
-$db = new PDO("mysql:host=localhost; dbname=cinetech", 'root', '');
-$this->_db = $db;
-}
+    public function __construct(){
+        try {
+            $db = new PDO('mysql:host=localhost;dbname=cinetech', "root", "");
+        } catch (\Throwable $th) {
+            echo $th->getMessage();
+        }
+        $this->_db = $db;
+    }
 
 
 
@@ -32,7 +26,7 @@ $this->_db = $db;
 
 
 
-public function inscription($email, $login, $motdepasse, $confirm)
+public function inscription($email, $login, $motdepasse)
 {
     $db = $this->_db;
     $msg = '';
@@ -40,42 +34,32 @@ public function inscription($email, $login, $motdepasse, $confirm)
     $login = htmlspecialchars($login);
     $email = htmlspecialchars($email);
     $motdepasse = htmlspecialchars($motdepasse);
-    $confirm = htmlspecialchars($confirm);
 
     $_login = trim($login);
     $_email = trim($email);
     $_motdepasse = trim($motdepasse);
     $cryptage = password_hash($_motdepasse, PASSWORD_BCRYPT);
-    $_confirm = trim($confirm);
 
-    $verification = $db->prepare("SELECT `login` FROM `utilisateurs` WHERE `login` = '$_login'");
+    $verification = $db->prepare("SELECT `login` FROM users WHERE login = '$_login'");
     $verification->execute();
-    $verification2 = $db->query("SELECT `email` FROM utilisateurs WHERE email = '$_email'");
+    $verification2 = $db->prepare("SELECT `email` FROM users WHERE email = '$_email'");
     $verification2->execute();
 
 
 
 
-    if(!empty($_email) && !empty($_login) && !empty($_motdepasse) && !empty($_confirm)){
         if($verification2->fetch(PDO::FETCH_ASSOC) == 0 ){
             if($verification->fetch(PDO::FETCH_ASSOC) == 0 ){
-                if($motdepasse == $confirm){
-                    $requete = "INSERT INTO `utilisateurs` (`email`, `login`, `password`) VALUES ('$_email', '$_login', '$cryptage')";
+                    $requete = "INSERT INTO `users` (`email`, `login`, `password`) VALUES ('$_email', '$_login', '$cryptage')";
                     $db->query($requete);
-                    $msg = 'Bienvenue ! ';
-                }else{
-                    $msg ='Les mots de passe ne correspondent pas';
-                }       
+                    $msg = 'Bienvenue !';                    
             }else{
                 $msg = 'Cette identifiant éxiste déjà';
             }
         }else{
             $msg = 'Cette email est déja utilisé';
         }
-    }else{
-        $msg = "Remplissez tout les champs ! ";
-    }
-echo $msg ; 
+return(json_encode($msg)); 
 }
 
 
@@ -93,42 +77,27 @@ echo $msg ;
 public function connexion($login, $password)
 {
     
-    $db = $this->_db;
+    $select = $this->_db->prepare('SELECT * FROM users WHERE login = :login');
+            $select -> bindParam('login', $login);
+            $select -> execute();
 
-    $msg = "";
+            $checkuser = $select->rowCount();
+            $data = $select->fetch(PDO::FETCH_OBJ);
+            
+            if ($checkuser === 1) {
+                // VERIFIER SI PASSWORD EST JUSTE
 
-    $login = htmlspecialchars($login);
-    $password = htmlspecialchars($password);
-
-    $_login = trim($login);
-    $_password = trim($password);
-
-    $requete = $db->prepare("SELECT * FROM utilisateurs WHERE login = '$_login'");
-    $requete->execute();
-
-    $verification = $requete->RowCount();
-
-    if(!empty($_login) && !empty($_password)){
-            if($verification == 1){
-                $info = $requete->fetch();
-                if( $_password == password_verify($_password, $info['password'])){
-                    $_SESSION['login'] = $info['login'];
-                    $_SESSION['password'] = $info['password'];
-                    $_SESSION['email'] = $info['email'];
-                    $_SESSION['id'] = $info['id'];
-                    
-                    $msg = "Connexion établie !";
-                    header("refresh: 1; url=profil.php");
-                }else{
-                $msg = "Mauvais mot de passe ! ";
+                if ($password == $data->password) {
+                    //CREE UNE COOKIE POUR STOCKER LE USER
+                    return(json_encode($data));
+                }else {
+                    return(json_encode("Mot de passe incorrecte"));
                 }
-            }else{
-            $msg = "Cette identifiant n'existe pas ! ";
+            }else {
+                return(json_encode('Aucun utilisateurs'));
             }
-    }else{
-    $msg = "Remplissez tout les champs !";
-    }
-    echo $msg;
+
+
 }
 
 
