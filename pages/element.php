@@ -21,12 +21,12 @@
             <div>
                 <h1>THE GHOST 2</h1>
                 <p class="date">23/02/2021 - Action - 2h45</p>
-                <br><br>
+                <br><br><br>
                 <p>Synopsis:</p>
                 <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam perferendis veniam sit blanditiis recusandae aliquid quam ipsum, voluptatum voluptatem velit amet? Consectetur exercitationem eveniet beatae unde reiciendis dignissimos ipsam
                     fuga?
                 </p>
-                <br><br>
+                <br><br><br>
                 <p>Réalisateur: Bablo escobar</p>
             </div>
         </section>
