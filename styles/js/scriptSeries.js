@@ -4,40 +4,40 @@ $(document).ready(function() {
     console.log('ok');
 
     let url_News = 'https://api.themoviedb.org/3/movie/top_rated?api_key=f2fd763fba76bb7c9b8ce5ea49552e82&language=en-US&page=' + page;
-    getMovies(url_News);
+    getTv(url_News);
 
 
     $('#btn_next').click(() => {
         page++;
-        let url_News = 'https://api.themoviedb.org/3/movie/top_rated?api_key=f2fd763fba76bb7c9b8ce5ea49552e82&language=en-US&page=' + page;
-        getMovies(url_News);
+        let url_News = 'https://api.themoviedb.org/3/tv/top_rated?api_key=f2fd763fba76bb7c9b8ce5ea49552e82&language=en-US&page=' + page;
+        getTv(url_News);
     })
     $('#btn_prev').click(() => {
         page--;
-        let url_News = 'https://api.themoviedb.org/3/movie/top_rated?api_key=f2fd763fba76bb7c9b8ce5ea49552e82&language=en-US&page=' + page;
-        getMovies(url_News);
+        let url_News = 'https://api.themoviedb.org/3/tv/top_rated?api_key=f2fd763fba76bb7c9b8ce5ea49552e82&language=en-US&page=' + page;
+        getTv(url_News);
     })
 })
 
-function getMovies(url_News) {
+function getTv(url_News) {
     fetch(url_News).then(Response => { return Response.json() }).then(data => {
         console.log(data.results);
         var title = '';
         var date = '';
         let articles = '';
-        data.results.forEach(movie => {
+        data.results.forEach(tv => {
             console.log('ok');
-            if (movie.name) {
-                title = movie.name;
-                date = movie.first_air_date;
+            if (tv.name) {
+                title = tv.name;
+                date = tv.first_air_date;
             } else {
-                title = movie.original_title;
-                date = movie.release_date;
+                title = tv.original_title;
+                date = tv.release_date;
             }
-            var article = ` <a href='element.php?id=${movie.id}&genre=movie'>
+            var article = ` <a href='element.php?id=${tv.id}&genre=tv'>
                                 <article>
                                     <div>
-                                        <img src="https://www.themoviedb.org/t/p/w1280/${movie.poster_path}" alt="photo du film ">
+                                        <img src="https://www.themoviedb.org/t/p/w1280/${tv.poster_path}" alt="photo du film ">
                                     </div>
                                     <div>
                                         <p>${title}</p>
@@ -53,5 +53,3 @@ function getMovies(url_News) {
         console.log(error);
     })
 }
-
-// fetch().then
