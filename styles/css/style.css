@@ -52,10 +52,12 @@ li {
 
 .element .acteur article {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .element .acteur article nav {
     margin: 0 20px;
+    width: 90px;
 }
 
 .element .acteur nav div:first-child {

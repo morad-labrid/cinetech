@@ -15,7 +15,7 @@ $(document).ready(function() {
                 title = movie.original_title;
                 date = movie.release_date;
             }
-            var article = ` <a href='pages/element.php?id=${movie.id}'>
+            var article = ` <a href='pages/element.php?id=${movie.id}&genre=${movie.media_type}'>
                                 <article>
                                     <div>
                                         <img src="https://www.themoviedb.org/t/p/w1280/${movie.poster_path}" alt="photo du film ">
