@@ -15,36 +15,11 @@
     <?php include'header.php' ?>
     <main class="element">
         <section class="movie">
-
         </section>
         <section class="acteur">
             <h3>Acteurs:</h3>
             <br>
             <article>
-                <nav>
-                    <div style="background-image: url(http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSbjTG6miGNBBi6LGkrN_xUP4kQrYZ0SvJ780rW706rjOzN6JUbcAy76ungUIX5);"></div>
-                    <p>Michael<br>Rainey</p>
-                </nav>
-                <nav>
-                    <div style="background-image: url(http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSbjTG6miGNBBi6LGkrN_xUP4kQrYZ0SvJ780rW706rjOzN6JUbcAy76ungUIX5);"></div>
-                    <p>Michael<br>Rainey</p>
-                </nav>
-                <nav>
-                    <div style="background-image: url(http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSbjTG6miGNBBi6LGkrN_xUP4kQrYZ0SvJ780rW706rjOzN6JUbcAy76ungUIX5);"></div>
-                    <p>Michael<br>Rainey</p>
-                </nav>
-                <nav>
-                    <div style="background-image: url(http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSbjTG6miGNBBi6LGkrN_xUP4kQrYZ0SvJ780rW706rjOzN6JUbcAy76ungUIX5);"></div>
-                    <p>Michael<br>Rainey</p>
-                </nav>
-                <nav>
-                    <div style="background-image: url(http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSbjTG6miGNBBi6LGkrN_xUP4kQrYZ0SvJ780rW706rjOzN6JUbcAy76ungUIX5);"></div>
-                    <p>Michael<br>Rainey</p>
-                </nav>
-                <nav>
-                    <div style="background-image: url(http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSbjTG6miGNBBi6LGkrN_xUP4kQrYZ0SvJ780rW706rjOzN6JUbcAy76ungUIX5);"></div>
-                    <p>Michael<br>Rainey</p>
-                </nav>
             </article>
         </section>
         <section class="avis">
