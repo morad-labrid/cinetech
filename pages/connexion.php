@@ -43,14 +43,6 @@
                 </div>
             </section>
             </div>
-            <?php
-                if(isset($_POST['inscription'])){
-                    $cinetech->inscription($_POST['inscription-email'], $_POST['inscription-login'], $_POST['inscription-password'], $_POST['inscription-confirm']);
-                }
-                if(isset($_POST['connexion'])){
-                $cinetech->connexion($_POST['identifiant'], $_POST['password']);
-                }
-            ?>
     </section>
 </main>
 <?php require 'footer.php'?>
