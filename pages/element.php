@@ -15,20 +15,7 @@
     <?php include'header.php' ?>
     <main class="element">
         <section class="movie">
-            <div>
-                <img src="../styles/img/film.jpeg" alt="Photo du film">
-            </div>
-            <div>
-                <h1>THE GHOST 2</h1>
-                <p class="date">23/02/2021 - Action - 2h45</p>
-                <br><br><br>
-                <p>Synopsis:</p>
-                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam perferendis veniam sit blanditiis recusandae aliquid quam ipsum, voluptatum voluptatem velit amet? Consectetur exercitationem eveniet beatae unde reiciendis dignissimos ipsam
-                    fuga?
-                </p>
-                <br><br><br>
-                <p>Réalisateur: Bablo escobar</p>
-            </div>
+
         </section>
         <section class="acteur">
             <h3>Acteurs:</h3>
@@ -134,6 +121,8 @@
         </section>
     </main>
     <?php include'footer.php' ?>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+    <script src="../styles/js/scriptelement.js "></script>
 </body>
 
 </html>
