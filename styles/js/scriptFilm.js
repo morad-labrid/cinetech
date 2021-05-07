@@ -1,12 +1,30 @@
-const url_News = 'https://api.themoviedb.org/3/trending/all/day?api_key=f2fd763fba76bb7c9b8ce5ea49552e82';
-
-
+let page = 1
 
 $(document).ready(function() {
+    console.log('ok');
+
+    let url_News = 'https://api.themoviedb.org/3/movie/top_rated?api_key=f2fd763fba76bb7c9b8ce5ea49552e82&language=en-US&page=' + page;
+    getMovies(url_News);
+
+
+    $('#btn_next').click(() => {
+        page++;
+        let url_News = 'https://api.themoviedb.org/3/movie/top_rated?api_key=f2fd763fba76bb7c9b8ce5ea49552e82&language=en-US&page=' + page;
+        getMovies(url_News);
+    })
+    $('#btn_prev').click(() => {
+        page--;
+        let url_News = 'https://api.themoviedb.org/3/movie/top_rated?api_key=f2fd763fba76bb7c9b8ce5ea49552e82&language=en-US&page=' + page;
+        getMovies(url_News);
+    })
+})
+
+function getMovies(url_News) {
     fetch(url_News).then(Response => { return Response.json() }).then(data => {
         console.log(data.results);
         var title = '';
         var date = '';
+        let articles = '';
         data.results.forEach(movie => {
             if (movie.name) {
                 title = movie.name;
@@ -15,7 +33,7 @@ $(document).ready(function() {
                 title = movie.original_title;
                 date = movie.release_date;
             }
-            var article = ` <a href='pages/element.php?id=${movie.id}'>
+            var article = ` <a href='element.php?id=${movie.id}'>
                                 <article>
                                     <div>
                                         <img src="https://www.themoviedb.org/t/p/w1280/${movie.poster_path}" alt="photo du film ">
@@ -26,11 +44,13 @@ $(document).ready(function() {
                                     </div>
                                 </article>
                             </a>`;
-            $('.articles').append(article);
-        });
+            articles = articles + article;
+
+        })
+        $('.articles').html(articles);
     }).catch((error) => {
         console.log(error);
     })
-})
+}
 
-fetch().then
+// fetch().then
