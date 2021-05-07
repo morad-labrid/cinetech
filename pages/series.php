@@ -15,6 +15,6 @@
     </div>
 </main>
 <?php require 'footer.php'?>
-<script src="../styles/js/scriptFilm.js "></script>
+<script src="../styles/js/scriptSeries.js "></script>
 </body>
 </html>

@@ -42,7 +42,7 @@ $(document).ready(function() {
 
 
     fetch(url_acteur).then(Response => { return Response.json() }).then(data => {
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 6; i++) {
             const movie = data.cast[i];
             var article = ` <nav>
                                 <div style="background-image: url(https://www.themoviedb.org/t/p/w1280/${movie.profile_path});"></div>
