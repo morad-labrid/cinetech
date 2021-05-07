@@ -107,6 +107,7 @@ header div:nth-child(3) {
     justify-content: space-between;
     width: 100%;
     padding: 0 6%;
+    flex-wrap: wrap;
 }
 
 .home section .articles article {
@@ -114,6 +115,7 @@ header div:nth-child(3) {
     background-color: #000000;
     border-radius: 16px;
     overflow: hidden;
+    margin: 10px;
 }
 
 .home section .articles article img {
