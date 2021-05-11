@@ -8,7 +8,6 @@ function setCookie(cname, cvalue, exdays) {
 $("#connexion").click(function() {
     var user = $("#identifiant").val();
     var password = $("#password").val();
-    console.log(user);
 
     if (user != '' && password != '') {
         $.ajax({

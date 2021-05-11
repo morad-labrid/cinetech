@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/css/style.css">
+    <link rel="stylesheet" href="../styles/css/style1.css">
     <link rel="stylesheet" href="../styles/css/header.css">
     <link rel="stylesheet" href="../styles/css/footer.css">
     <title>Document</title>
@@ -22,8 +23,9 @@
             <article>
             </article>
         </section>
-        <section class="avis">
-            <h3>Avis (23)</h3>
+        <section class="avis" id="avis">
+            <h3>Avis</h3>
+            <!--
             <div>
                 <p>Par: Morad</p>
                 <p>Lorem ipsum dolaperiam at aliquam numquam ea adipisci odio eius harum similique tempore reiciendis consequatur.</p>
@@ -43,7 +45,7 @@
                 <p>Par: Morad</p>
                 <p>Lorem i aliquam numquam ea adipisci odio eius harum similique tempore reiciendis consequatur.</p>
             </div>
-            <div></div>
+            <div></div> -->
             <form action="" method="post">
                 <textarea name="" id="" cols="30" rows="10"></textarea>
                 <br>
@@ -98,6 +100,7 @@
     <?php include'footer.php' ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
     <script src="../styles/js/scriptelement.js "></script>
+    <script src="../styles/js/scriptCommentaire.js "></script>
 </body>
 
 </html>
