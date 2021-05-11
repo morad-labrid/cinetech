@@ -272,6 +272,12 @@ body {
 
 /* ///////////////////////////////////////////////////////////////////////////////////// */
 
-.cadre-description {
-    margin-top: 100px;
+.username-element {
+    font-size: 25px !important;
+    font-weight: bold !important;
+}
+
+.content-element {
+    font-size: 13px !important;
+    font-weight: lighter;
 }
