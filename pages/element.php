@@ -17,7 +17,7 @@
         <section class="movie">
         </section>
         <section class="acteur">
-            <h3>Acteurs:</h3>
+            <h3 class="titre-acteurs">Acteurs:</h3>
             <br>
             <article>
             </article>

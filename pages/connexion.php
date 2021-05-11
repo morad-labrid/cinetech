@@ -9,7 +9,6 @@
         <?php
         if(isset($_GET['statut']) == 'inscription'){
             $form = '<div class="cadre-connexion">
-                        <div class="" id="response"></div>
                         <div class="form-connexion" action="" method="POST">
                             <div class="ipt">
                                 <input class="input-inscription" name="inscription-login" id="inscription-login" type="text" placeholder="Identifiant">
@@ -22,9 +21,8 @@
         $link = '<a href="connexion.php">Connexion</a>';
         }else{
             $form = '<div class="cadre-connexion1">
-                     <div class="" id="response"></div>
                         <div class="form-connexion" action="" method="POST">
-                            <div class="ipt">
+                            <div id="ipt" class="ipt">
                                 <input class="input-inscription" name="identifiant" id="identifiant" type="text" placeholder="Identifiant">
                                 <input class="input-inscription" name="password" id="password" type="password" placeholder="Mot de passe">
                                 <input class="input-valider" name="connexion" class="input-button" type="submit" value="connexion" id="connexion">
@@ -42,6 +40,7 @@
                     <a href="">MDP oublié ?</a>
                 </div>
             </section>
+            <div class="response" id="response"></div>
             </div>
     </section>
 </main>

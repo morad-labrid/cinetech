@@ -8,6 +8,7 @@ function setCookie(cname, cvalue, exdays) {
 $("#connexion").click(function() {
     var user = $("#identifiant").val();
     var password = $("#password").val();
+    console.log(user);
 
     if (user != '' && password != '') {
         $.ajax({
@@ -22,12 +23,17 @@ $("#connexion").click(function() {
                 data = JSON.parse(data);
                 console.log(data);
                 if (data.login == user) {
-                    setCookie("user", data.id, 1)
+                    setCookie("id", data.id, 1)
+                    setCookie("user", data.login, 1)
+                    setCookie("email", data.email, 1)
+                    setCookie("password", data.password, 1)
+                    $(location).attr('href', 'profil.php');
                 } else($("#response").html(data))
             }
         })
+    } else {
+        $("#response").html('Remplissez tout les champs')
     }
-    $("#response").html('Remplissez tout les champs')
 })
 
 $("#inscription").click(function() {
@@ -56,7 +62,7 @@ $("#inscription").click(function() {
                 }
             })
         }
-        $("#response").html('Les mots de passes ne sont pas identique')
+        $("#response").html('Les mots de passes ne sont pas identiques')
     }
     $("#response").html('Remplissez tout les champs')
 })

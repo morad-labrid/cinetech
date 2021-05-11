@@ -26,7 +26,7 @@ $(document).ready(function() {
         var article = ` <div>
                             <img src="https://www.themoviedb.org/t/p/w1280/${data.poster_path}" alt="Photo du film">
                         </div>
-                        <div>
+                        <div class="cadre-description">
                             <h1>${title}(${linktype})</h1>
                             <p class="date">${date} - ${data.genres[0].name} ${time}</p>
                             <br><br><br>
@@ -42,11 +42,11 @@ $(document).ready(function() {
 
 
     fetch(url_acteur).then(Response => { return Response.json() }).then(data => {
-        for (let i = 0; i < 6; i++) {
+        for (let i = 0; i < 9; i++) {
             const movie = data.cast[i];
             var article = ` <nav>
                                 <div style="background-image: url(https://www.themoviedb.org/t/p/w1280/${movie.profile_path});"></div>
-                                <p>${movie.original_name}</p>
+                                <p class="nom-acteur">${movie.original_name}</p>
                             </nav>`;
             $('.acteur article').append(article);
         }

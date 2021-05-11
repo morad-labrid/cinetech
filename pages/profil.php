@@ -18,7 +18,7 @@
                     Identifiant : 
                 </div>
                 <div class="information">
-                    <?= $_SESSION['login'] ?>
+                    <?= $_COOKIE['user'] ?>
                 </div>
             </div>
             <div class="espace">
@@ -26,7 +26,7 @@
                     E-mail : 
                 </div>
                 <div class="information">
-                    <?= $_SESSION['email'] ?>
+                    <?= $_COOKIE['email'] ?>
                 </div>
             </div>
             <form class="form-button" action="" method="POST">

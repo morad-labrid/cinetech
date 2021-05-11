@@ -84,10 +84,10 @@ public function connexion($login, $password)
             $checkuser = $select->rowCount();
             $data = $select->fetch(PDO::FETCH_OBJ);
             
-            if ($checkuser === 1) {
+            if ($checkuser == 1) {
                 // VERIFIER SI PASSWORD EST JUSTE
-
-                if ($password == $data->password) {
+                $verify = password_verify($password, $data->password);
+                if ($verify == true) {
                     //CREE UNE COOKIE POUR STOCKER LE USER
                     return(json_encode($data));
                 }else {
