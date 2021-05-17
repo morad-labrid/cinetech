@@ -53,5 +53,3 @@ function getMovies(url_News) {
         console.log(error);
     })
 }
-
-// fetch().then

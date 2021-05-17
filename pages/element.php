@@ -25,34 +25,12 @@
         </section>
         <section class="avis" id="avis">
             <h3>Avis</h3>
-            <!--
-            <div>
-                <p>Par: Morad</p>
-                <p>Lorem ipsum dolaperiam at aliquam numquam ea adipisci odio eius harum similique tempore reiciendis consequatur.</p>
-            </div>
-            <br>
-            <div>
-                <p>Par: Morad</p>
-                <p>Lorem ipsuquam numquam ea adipisci odio eius hariendis consequatur.</p>
-            </div>
-            <br>
-            <div>
-                <p>Par: Morad</p>
-                <p>Lorem ipsum vident corporis ratione aperiam at aliquam numquam ea adipisci odio eius harum similique tempore reiciendis consequatur.</p>
-            </div>
-            <br>
-            <div>
-                <p>Par: Morad</p>
-                <p>Lorem i aliquam numquam ea adipisci odio eius harum similique tempore reiciendis consequatur.</p>
-            </div>
-            <div></div> -->
-            <form action="" method="post">
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-                <br>
-                <button>Envoyer</button>
-            </form>
         </section>
-
+        <form action="" method="post">
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <br>
+            <button>Envoyer</button>
+        </form>
         <section id="similaire">
             <div class="title">
                 <p>Similaire</p>

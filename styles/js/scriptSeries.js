@@ -3,7 +3,7 @@ let page = 1
 $(document).ready(function() {
     console.log('ok');
 
-    let url_News = 'https://api.themoviedb.org/3/movie/top_rated?api_key=f2fd763fba76bb7c9b8ce5ea49552e82&language=en-US&page=' + page;
+    let url_News = 'https://api.themoviedb.org/3/tv/top_rated?api_key=f2fd763fba76bb7c9b8ce5ea49552e82&language=en-US&page=' + page;
     getTv(url_News);
 
 
@@ -13,7 +13,9 @@ $(document).ready(function() {
         getTv(url_News);
     })
     $('#btn_prev').click(() => {
-        page--;
+        if (page > 1) {
+            page--;
+        }
         let url_News = 'https://api.themoviedb.org/3/tv/top_rated?api_key=f2fd763fba76bb7c9b8ce5ea49552e82&language=en-US&page=' + page;
         getTv(url_News);
     })
