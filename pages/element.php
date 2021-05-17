@@ -36,42 +36,6 @@
                 <p>Similaire</p>
             </div>
             <div class="articles">
-                <article>
-                    <div>
-                        <img src="../styles/img/film.jpeg" alt="photo du film">
-                    </div>
-                    <div>
-                        <p>Titre PSY4</p>
-                        <p>24-03-2020</p>
-                    </div>
-                </article>
-                <article>
-                    <div>
-                        <img src="https://www.filmoflix.org/uploads/posts/covers/0f262757dfb4095f7556b89f94aabece.jpg" alt="photo du film">
-                    </div>
-                    <div>
-                        <p>Titre PSY4</p>
-                        <p>24-03-2020</p>
-                    </div>
-                </article>
-                <article>
-                    <div>
-                        <img src="https://www.filmoflix.org/uploads/posts/2021-05/1619864795_obqh9.jpg" alt="photo du film">
-                    </div>
-                    <div>
-                        <p>Titre PSY4</p>
-                        <p>24-03-2020</p>
-                    </div>
-                </article>
-                <article>
-                    <div>
-                        <img src="https://www.filmoflix.org/uploads/posts/2021-05/1619860809_v03uy.jpg" alt="photo du film">
-                    </div>
-                    <div>
-                        <p>Titre PSY4</p>
-                        <p>24-03-2020</p>
-                    </div>
-                </article>
             </div>
         </section>
     </main>
@@ -79,6 +43,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
     <script src="../styles/js/scriptelement.js "></script>
     <script src="../styles/js/scriptCommentaire.js "></script>
+    <script src="../styles/js/scriptSimilaire.js "></script>
 </body>
 
 </html>

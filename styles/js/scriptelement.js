@@ -50,10 +50,6 @@ $(document).ready(function() {
                             </nav>`;
             $('.acteur article').append(article);
         }
-
-
-
-
     }).catch((error) => {
         console.log(error);
     })

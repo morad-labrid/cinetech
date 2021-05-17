@@ -21,12 +21,10 @@ $(document).ready(function() {
 
 function getMovies(url_News) {
     fetch(url_News).then(Response => { return Response.json() }).then(data => {
-        console.log(data.results);
         var title = '';
         var date = '';
         let articles = '';
         data.results.forEach(movie => {
-            console.log('ok');
             if (movie.name) {
                 title = movie.name;
                 date = movie.first_air_date;
