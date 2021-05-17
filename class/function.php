@@ -117,5 +117,35 @@ public function deconnect()
     session_destroy();
     header("url=connexion.php");
 }
+
+
+
+// ////////////////////////////////////////
+
+
+// ///////////////////////////////////////////////// FONCTION POUR ENVOYER DES COMMENTAIRES
+
+
+// ////////////////////////////////////////
+
+
+
+public function envoyercommentaire($_id_user, $id_element, $_avis, $_date){
+
+$link = $this->_link;
+
+    $_com = addslashes($_avis);
+
+$query = $link->prepare("INSERT INTO commentaires (id_user, id_element, avis, date) VALUES ('$_id_user', '$id_element', '$_com', '$_date')");
+
+    $query->execute();
+echo 'commentaire envoyé';
+header("refresh: 0.5");
+
+
+}
+
+
+
 } 
 ?>

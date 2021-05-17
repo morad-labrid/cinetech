@@ -26,11 +26,21 @@
         <section class="avis" id="avis">
             <h3>Avis</h3>
         </section>
-        <form action="" method="post">
-            <textarea name="" id="" cols="30" rows="10"></textarea>
+        <?php
+        if(isset($_COOKIE['user'])){
+        echo '<form class="envoie-commentaire" action="" method="post">
+            <textarea class="commentaire" name="" id="commentaire" cols="100" rows="10"></textarea>
             <br>
-            <button>Envoyer</button>
-        </form>
+            <button class="button-envoie" id="envoiecommentaire">Envoyer</button>
+            </form>';
+        }
+
+        if(isset($_POST['commentaire'])){
+            $commentaire = $_POST['commentaire'];
+            echo $cinetech->connexion($user, $password);
+        }
+        ?>
+        <div class="response" id="response"></div>
         <section id="similaire">
             <div class="title">
                 <p>Similaire</p>
@@ -45,5 +55,4 @@
     <script src="../styles/js/scriptCommentaire.js "></script>
     <script src="../styles/js/scriptSimilaire.js "></script>
 </body>
-
 </html>
