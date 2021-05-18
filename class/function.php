@@ -102,20 +102,35 @@ public function connexion($login, $password)
 
 
 
-// ////////////////////////////////////////
-
-
-// ///////////////////////////////////////////////// FONCTION POUR SE DECONNECTER
-
-
-// ////////////////////////////////////////
-
-
-
 public function deconnect()
 {
     session_destroy();
     header("url=connexion.php");
 }
+
+
+
+
+public function addwish($idUser, $idFilm, $type)
+{
+    $select = $this->_db->prepare('INSERT INTO favoris (`id_user`, `id_element`, `type`) VALUES (:idUser, :idFilm, :type)');
+    $select -> bindParam('id_user', $idUser);
+    $select -> bindParam('id_element', $idFilm);
+    $select -> bindParam('type', $type);
+    $select -> execute();
+}
+
+
+
+
+public function deletewish($id)
+{
+    $select = $this->_db->prepare('DELETE FROM `favoris` WHERE id=:id');
+    $select -> bindParam('id', $id);
+    $select -> execute();
+}
+
+
+
 } 
 ?>
