@@ -1,3 +1,10 @@
+<?php
+    include('../class/function.php');
+    $wish = new cinetech();
+
+    $selectWish = $wish->selectwish(5);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +21,7 @@
 <body>
     <?php include'header.php'?>
     <main class="list">
-        <section class="sideBar">
+        <!-- <section class="sideBar">
             <div class="filter">
                 <p>Filter par gategorie</p>
                 <hr>
@@ -44,126 +51,27 @@
                     <label for="documentaire">Documentaire</label>
                 </div>
             </div>
-        </section>
+        </section> -->
+
         <section class="sidBarRight">
             <div class="articles ">
-                <article>
-                    <div>
-                        <img src="../styles/img/film.jpeg" alt="photo du film ">
-                    </div>
-                    <div>
-                        <p>Titre PSY4</p>
-                        <p>24-03-2020</p>
-                    </div>
-                </article>
-                <article>
-                    <div>
-                        <img src="https://fr.web.img2.acsta.net/c_310_420/pictures/21/02/19/10/16/2490178.jpg" alt="photo du film ">
-                    </div>
-                    <div>
-                        <p>Titre PSY4</p>
-                        <p>24-03-2020</p>
-                    </div>
-                </article>
-                <article>
-                    <div>
-                        <img src="https://fr.web.img4.acsta.net/c_310_420/medias/nmedia/18/90/08/59/20366454.jpg" alt="photo du film ">
-                    </div>
-                    <div>
-                        <p>Titre PSY4</p>
-                        <p>24-03-2020</p>
-                    </div>
-                </article>
-                <article>
-                    <div>
-                        <img src="https://fr.web.img4.acsta.net/c_310_420/medias/nmedia/18/90/08/59/20366454.jpg" alt="photo du film ">
-                    </div>
-                    <div>
-                        <p>Titre PSY4</p>
-                        <p>24-03-2020</p>
-                    </div>
-                </article>
-                <article>
-                    <div>
-                        <img src="https://fr.web.img4.acsta.net/c_310_420/medias/nmedia/18/90/08/59/20366454.jpg" alt="photo du film ">
-                    </div>
-                    <div>
-                        <p>Titre PSY4</p>
-                        <p>24-03-2020</p>
-                    </div>
-                </article>
-                <article>
-                    <div>
-                        <img src="https://fr.web.img4.acsta.net/c_310_420/medias/nmedia/18/90/08/59/20366454.jpg" alt="photo du film ">
-                    </div>
-                    <div>
-                        <p>Titre PSY4</p>
-                        <p>24-03-2020</p>
-                    </div>
-                </article>
-                <article>
-                    <div>
-                        <img src="https://fr.web.img4.acsta.net/c_310_420/medias/nmedia/18/90/08/59/20366454.jpg" alt="photo du film ">
-                    </div>
-                    <div>
-                        <p>Titre PSY4</p>
-                        <p>24-03-2020</p>
-                    </div>
-                </article>
-                <article>
-                    <div>
-                        <img src="https://fr.web.img4.acsta.net/c_310_420/medias/nmedia/18/90/08/59/20366454.jpg" alt="photo du film ">
-                    </div>
-                    <div>
-                        <p>Titre PSY4</p>
-                        <p>24-03-2020</p>
-                    </div>
-                </article>
-                <article>
-                    <div>
-                        <img src="https://fr.web.img4.acsta.net/c_310_420/medias/nmedia/18/90/08/59/20366454.jpg" alt="photo du film ">
-                    </div>
-                    <div>
-                        <p>Titre PSY4</p>
-                        <p>24-03-2020</p>
-                    </div>
-                </article>
-                <article>
-                    <div>
-                        <img src="https://fr.web.img4.acsta.net/c_310_420/medias/nmedia/18/90/08/59/20366454.jpg" alt="photo du film ">
-                    </div>
-                    <div>
-                        <p>Titre PSY4</p>
-                        <p>24-03-2020</p>
-                    </div>
-                </article>
-                <article>
-                    <div>
-                        <img src="https://fr.web.img4.acsta.net/c_310_420/medias/nmedia/18/90/08/59/20366454.jpg" alt="photo du film ">
-                    </div>
-                    <div>
-                        <p>Titre PSY4</p>
-                        <p>24-03-2020</p>
-                    </div>
-                </article>
-                <article>
-                    <div>
-                        <img src="https://fr.web.img4.acsta.net/c_310_420/medias/nmedia/18/90/08/59/20366454.jpg" alt="photo du film ">
-                    </div>
-                    <div>
-                        <p>Titre PSY4</p>
-                        <p>24-03-2020</p>
-                    </div>
-                </article>
-                <article>
-                    <div>
-                        <img src="https://fr.web.img4.acsta.net/c_310_420/medias/nmedia/18/90/08/59/20366454.jpg" alt="photo du film ">
-                    </div>
-                    <div>
-                        <p>Titre PSY4</p>
-                        <p>24-03-2020</p>
-                    </div>
-                </article>
+            <?php
+
+foreach ($selectWish as $key) {
+    echo '  <a href="element.php?id='.$key->id_element.'&genre='.$key->type.'">
+            <article>
+                <div>
+                    <img src="https://www.themoviedb.org/t/p/w1280/'.$key->img.'" alt="photo du film ">
+                </div>
+                <div>
+                    <p>'.$key->name.'</p>
+                    <p>'.$key->date.'</p>
+                </div>
+            </article>
+            </a>';
+}
+        
+        ?>
             </div>
         </section>
     </main>

@@ -208,3 +208,8 @@ input[type='checkbox']:checked:before {
 .list section .articles article div:last-child {
     padding: 6px 20px;
 }
+
+.addToListe:hover {
+    cursor: pointer;
+    color: red;
+}

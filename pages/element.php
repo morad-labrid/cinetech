@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../styles/css/style1.css">
     <link rel="stylesheet" href="../styles/css/header.css">
     <link rel="stylesheet" href="../styles/css/footer.css">
+    <script src="https://kit.fontawesome.com/d34f22fe3f.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 

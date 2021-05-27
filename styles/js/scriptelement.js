@@ -22,9 +22,9 @@ $(document).ready(function() {
             var time = '- ' + rhours + "h" + rminutes;
         }
 
-
+        var titre = title.replace(/'/g, "\\'");
         var article = ` <div>
-                            <img src="https://www.themoviedb.org/t/p/w1280/${data.poster_path}" alt="Photo du film">
+                            <img src="https://www.themoviedb.org/t/p/w1280${data.poster_path}" alt="Photo du film">
                         </div>
                         <div class="cadre-description">
                             <h1>${title}(${linktype})</h1>
@@ -34,6 +34,7 @@ $(document).ready(function() {
                             <p class="description">${data.overview}</p>
                             <br><br><br>
                             <p>Réalisateur: ${data.production_companies[0].name}</p>
+                            <p class="addToListe" onclick="addwish('` + titre + ',' + data.poster_path + `')"><i class="far fa-heart"></i> Ajouter a ma liste<p>
                         </div>`;
         $('.movie').append(article);
     }).catch((error) => {
@@ -54,4 +55,26 @@ $(document).ready(function() {
         console.log(error);
     })
 
+
+
 })
+
+
+function addwish(titre, img) {
+    console.log(titre);
+    // $.ajax({
+    //     url: '../pages/element.php',
+    //     method: 'POST',
+    //     data: {
+    //         idFilm: linkid,
+    //         typeFilm: linktype
+    //     },
+    //     success: function(data) {
+    //         data = JSON.parse(data);
+    //         console.log(data);
+    //         if (data.login == user) {
+    //             $(location).attr('href', 'profil.php');
+    //         } else($("#response").html(data))
+    //     }
+    // })
+}

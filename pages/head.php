@@ -25,6 +25,7 @@ $cinetech = new cinetech();
     <link rel="shortcut icon " href="../img/cinetech.ico " type="image/x-icon " />
     <link rel="icon " href="../styles/img/music.ico " type="image/x-icon " />
     <link rel="apple-touch-icon " href="../styles/img/apple-touch-icon.png ">
+    <script src="https://kit.fontawesome.com/d34f22fe3f.js" crossorigin="anonymous"></script>
     <title>CINETECH°</title>
 </head>
 
