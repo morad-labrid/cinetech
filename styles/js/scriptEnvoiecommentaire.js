@@ -1,6 +1,10 @@
-$("#envoiecommentaire").click(function() {
-    var commentaire = $("#commentaire").val();
+const params = new URLSearchParams(window.location.search);
+linkid = params.get('id');
+linktype = params.get('genre');
 
+$("#envoiecommentaire").click(function() {
+    console.log('btn ok');
+    var commentaire = $("#commentaire").val();
     if (commentaire != '') {
         $.ajax({
             url: '../pages/element.php',
