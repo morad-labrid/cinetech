@@ -157,10 +157,9 @@ class cinetech
 
         $query = $link->prepare("INSERT INTO commentaires (id_user, id_element, avis, date) VALUES ('$_id_user', '$id_element', '$_com', '$_date')");
 
-            $query->execute();
-        echo 'commentaire envoyé';
+        $query->execute();
+        return 'commentaire envoyé';
         header("refresh: 0.5");
-
 
         }
 

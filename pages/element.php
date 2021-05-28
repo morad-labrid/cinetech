@@ -1,3 +1,9 @@
+<?php
+session_start();
+include("../class/function.php");
+$cinetech = new cinetech();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,13 +38,15 @@
         echo '<form class="envoie-commentaire" action="" method="post">
             <textarea class="commentaire" name="" id="commentaire" cols="100" rows="10"></textarea>
             <br>
-            <button class="button-envoie" id="envoiecommentaire">Envoyer</button>
-            </form>';
+            </form>
+            <button class="button-envoie" id="envoiecommentaire">Envoyer</button>';
         }
 
         if(isset($_POST['commentaire'])){
             $commentaire = $_POST['commentaire'];
-            echo $cinetech->connexion($user, $password);
+            $ok = $cinetech->envoyercommentaire($_COOKIE['id'], $_POST['id'], $commentaire, date('Y-m-d H:i:s'));
+            echo json_decode($ok);
+
         }
         ?>
         <div class="response" id="response"></div>
@@ -54,6 +62,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
     <script src="../styles/js/scriptelement.js "></script>
     <script src="../styles/js/scriptCommentaire.js "></script>
-    <script src="../styles/js/scriptSimilaire.js "></script>
+    <script src="../styles/js/scriptEnvoiecommentaire.js "></script>
+    <!-- <script src="../styles/js/scriptSimilaire.js "></script> -->
 </body>
 </html>
