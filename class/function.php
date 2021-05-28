@@ -148,7 +148,7 @@ class cinetech
 
 
 
-        
+
         public function envoyercommentaire($_id_user, $id_element, $_avis, $_date){
 
         $link = $this->_link;
