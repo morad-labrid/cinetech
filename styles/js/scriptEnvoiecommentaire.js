@@ -1,6 +1,6 @@
 $("#envoiecommentaire").click(function() {
+    console.log('btn ok');
     var commentaire = $("#commentaire").val();
-
     if (commentaire != '') {
         $.ajax({
             url: '../pages/element.php',

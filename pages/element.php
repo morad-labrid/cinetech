@@ -1,9 +1,3 @@
-<?php
-session_start();
-include("../class/function.php");
-$cinetech = new cinetech();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,11 +36,10 @@ $cinetech = new cinetech();
             <button class="button-envoie" id="envoiecommentaire">Envoyer</button>';
         }
 
+        
         if(isset($_POST['commentaire'])){
             $commentaire = $_POST['commentaire'];
-            $ok = $cinetech->envoyercommentaire($_COOKIE['id'], $_POST['id'], $commentaire, date('Y-m-d H:i:s'));
-            echo json_decode($ok);
-
+            echo $cinetech->connexion($user, $password);
         }
         ?>
         <div class="response" id="response"></div>
@@ -63,6 +56,6 @@ $cinetech = new cinetech();
     <script src="../styles/js/scriptelement.js "></script>
     <script src="../styles/js/scriptCommentaire.js "></script>
     <script src="../styles/js/scriptEnvoiecommentaire.js "></script>
-    <!-- <script src="../styles/js/scriptSimilaire.js "></script> -->
+    <script src="../styles/js/scriptSimilaire.js "></script>
 </body>
 </html>
