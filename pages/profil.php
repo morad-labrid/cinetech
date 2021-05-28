@@ -1,3 +1,8 @@
+<?php
+    if(!isset($_COOKIE['user'])){
+        header('location:../index.php'); 
+    }
+?>
 
 <?php require 'head.php'?>
 <body>
@@ -32,9 +37,9 @@
             <form class="form-button" action="" method="POST">
                 <input class="button-info" name="modif-info" type="submit" value="Modifier information">
             </form>
-            <form class="form-button" action="" method="POST">
-                <input class="button-info" name="deconnect" type="submit" value="Déconnexion">
-            </form>
+            <div class="form-button">
+                <button class="button-info" id="deconnexion" name="deconnect">Déconnexion</button>
+            </div>
             <?php
                 if(isset($_POST['deconnect'])){
                     $cinetech->deconnect();
