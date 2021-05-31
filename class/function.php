@@ -111,14 +111,14 @@ class cinetech
 
 
 
-        public function addwish($idUser, $idFilm, $type)
+        public function addwish($idFilm, $type, $idUser)
         {
-            $select = $this->_db->prepare('INSERT INTO favoris (`id_user`, `id_element`, `type`) VALUES (:idUser, :idFilm, :type)');
-            $select -> bindParam('id_user', $idUser);
-            $select -> bindParam('id_element', $idFilm);
-            $select -> bindParam('type', $type);
+            $select = $this->_db->prepare('INSERT INTO favoris (`id_user`, `id_element`, `type`) VALUES (:idUser, :idFilm, :typeFilm)');
+            $select -> bindParam('idUser', $idUser);
+            $select -> bindParam('idFilm', $idFilm);
+            $select -> bindParam('typeFilm', $type);
             $select -> execute();
-            return json_encode('ok');
+            return $select;
         }
 
         public function deletewish($id)
@@ -130,6 +130,7 @@ class cinetech
 
         public function selectwish($idUser)
         {
+            $idUser = 5;
             $select = $this->_db->prepare('SELECT * FROM `favoris` WHERE id_user=:id');
             $select -> bindParam('id', $idUser);
             $select -> execute();

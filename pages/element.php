@@ -1,3 +1,7 @@
+<?php
+include("../class/function.php");
+$cinetech = new cinetech();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,6 +45,12 @@
             $commentaire = $_POST['commentaire'];
             echo $cinetech->connexion($user, $password);
         }
+
+        if(isset($_GET['addwish'])){
+            $send = $cinetech->addwish($_GET['idFilm'], $_GET['typeFilm'], $_COOKIE['id']);
+            echo json_encode($send);
+        }
+        
         ?>
         <div class="response" id="response"></div>
         <section id="similaire">
