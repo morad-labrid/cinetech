@@ -15,4 +15,9 @@ if(isset($_GET['inscription'])){
     echo $cinetech->inscription($email, $user, $password);
 }
 
+if(isset($_GET['linkid'])){
+    $id = $_GET['linkid'];
+    $data = $cinetech->affichercommentaire($id);
+    echo json_encode($data);
+}
 ?>

@@ -151,17 +151,59 @@ class cinetech
 
         public function envoyercommentaire($_id_user, $id_element, $_avis, $_date){
 
-        $link = $this->_link;
-
-            $_com = addslashes($_avis);
+        $link = $this->_db;
+        $_com = addslashes($_avis);
 
         $query = $link->prepare("INSERT INTO commentaires (id_user, id_element, avis, date) VALUES ('$_id_user', '$id_element', '$_com', '$_date')");
-
         $query->execute();
-        return 'commentaire envoyé';
-        header("refresh: 0.5");
 
+        return json_encode('commentaire envoyé');
+        // header("refresh: 0.5");
         }
 
+
+
+        // ////////////////////////////////////////
+
+
+        // ///////////////////////////////////////////////// FONCTION POUR AFFICHER LES COMMENTAIRES
+
+
+        // ////////////////////////////////////////
+
+
+
+        public function affichercommentaire($_id){
+            
+        $link = $this->_db;
+
+        $select = $this->_db->prepare("SELECT * FROM `commentaires` INNER JOIN `users` ON commentaires.id_user = users.id  WHERE id_element = $_id");
+        $select -> execute();
+
+        $data = $select->fetchAll(PDO::FETCH_ASSOC);
+
+        // foreach($data as $key){
+        //     echo `<div class="username-element">
+        //     Auteur :
+        //     </div>
+        //     <div class="date-element">`
+        //         . $key['login'] .
+        //     `</div>
+        //     <article>
+        //         <div class="content-element">`
+        //             .$key['avis'].
+        //         `</div>
+        //         <div class="date-element">
+        //             <p>` . $key['date'] . `</p>
+        //         </div>
+        //     </article>
+        //     `;
+        // }
+        // var_dump($data);
+
+        // return json_encode($data);     
+
+        return $data;
+        }
     } 
 ?>

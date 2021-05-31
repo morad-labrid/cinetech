@@ -1,3 +1,9 @@
+<?php
+session_start();
+include("../class/function.php");
+$cinetech = new cinetech();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,21 +32,33 @@
         </section>
         <section class="avis" id="avis">
             <h3>Avis</h3>
+            <?php
+                $cinetech->affichercommentaire($_GET['id']);
+            ?>
+        </section>
+
+        <section class="avis">
+            
         </section>
         <?php
         if(isset($_COOKIE['user'])){
-        echo '<form class="envoie-commentaire" action="" method="post">
+        echo '<form class="envoie-commentaire" action="" method="">
             <textarea class="commentaire" name="" id="commentaire" cols="100" rows="10"></textarea>
             <br>
             </form>
             <button class="button-envoie" id="envoiecommentaire">Envoyer</button>';
         }
+        // echo "<div id='afficher'>
+        if(isset($_GET['id'])){
+            $id = $_GET['id'];
+            $cinetech->affichercommentaire($id);
+        }
 
-        
         if(isset($_POST['commentaire'])){
             $commentaire = $_POST['commentaire'];
-            echo $cinetech->connexion($user, $password);
-        }
+            $id = $_POST['id'];
+            $cinetech->envoyercommentaire($_COOKIE['id'], $id, $commentaire, date('Y-m-d H:i:s'));
+        };
         ?>
         <div class="response" id="response"></div>
         <section id="similaire">
@@ -52,10 +70,11 @@
         </section>
     </main>
     <?php include'footer.php' ?>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
-    <script src="../styles/js/scriptelement.js "></script>
-    <script src="../styles/js/scriptCommentaire.js "></script>
-    <script src="../styles/js/scriptEnvoiecommentaire.js "></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../styles/js/scriptelement.js"></script>
+    <script src="../styles/js/scriptEnvoiecommentaire.js"></script>
+    <script src="../styles/js/scriptAffichercommentaire.js"></script>
+    <script src="../styles/js/scriptCommentaire.js"></script>
     <script src="../styles/js/scriptSimilaire.js "></script>
 </body>
 </html>

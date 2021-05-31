@@ -40,7 +40,7 @@ $(document).ready(function() {
                 commentaires = commentaires + commentaire;
 
             })
-            $('#avis').html(commentaires);
+            $('#avis').append(commentaires);
         }).catch((error) => {
             console.log(error);
         })
