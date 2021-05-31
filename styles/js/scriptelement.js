@@ -34,7 +34,7 @@ $(document).ready(function() {
                             <p class="description">${data.overview}</p>
                             <br><br><br>
                             <p>Réalisateur: ${data.production_companies[0].name}</p>
-                            <p class="addToListe" onclick="addwish('` + titre + ',' + data.poster_path + `')"><i class="far fa-heart"></i> Ajouter a ma liste<p>
+                            <p class="addToListe" onclick="addwish('` + titre + `','` + data.poster_path + `')"><i class="far fa-heart"></i> Ajouter a ma liste<p>
                         </div>`;
         $('.movie').append(article);
     }).catch((error) => {
@@ -61,7 +61,8 @@ $(document).ready(function() {
 
 
 function addwish(titre, img) {
-    console.log(titre);
+    console.log('titre: ' + titre);
+    console.log('img: ' + img);
     // $.ajax({
     //     url: '../pages/element.php',
     //     method: 'POST',
