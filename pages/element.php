@@ -1,9 +1,7 @@
 <?php
-session_start();
 include("../class/function.php");
 $cinetech = new cinetech();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -56,6 +54,14 @@ $cinetech = new cinetech();
 
         if(isset($_POST['commentaire'])){
             $commentaire = $_POST['commentaire'];
+            echo $cinetech->connexion($user, $password);
+        }
+
+        if(isset($_GET['addwish'])){
+            $send = $cinetech->addwish($_GET['idFilm'], $_GET['typeFilm'], $_COOKIE['id']);
+            echo json_encode($send);
+        }
+        
             $id = $_POST['id'];
             $cinetech->envoyercommentaire($_COOKIE['id'], $id, $commentaire, date('Y-m-d H:i:s'));
         };
