@@ -1,7 +1,6 @@
 let page = 1
 
 $(document).ready(function() {
-    console.log('ok');
 
     let url_News = 'https://api.themoviedb.org/3/tv/top_rated?api_key=f2fd763fba76bb7c9b8ce5ea49552e82&language=en-US&page=' + page;
     getTv(url_News);
@@ -23,12 +22,10 @@ $(document).ready(function() {
 
 function getTv(url_News) {
     fetch(url_News).then(Response => { return Response.json() }).then(data => {
-        console.log(data.results);
         var title = '';
         var date = '';
         let articles = '';
         data.results.forEach(tv => {
-            console.log('ok');
             if (tv.name) {
                 title = tv.name;
                 date = tv.first_air_date;

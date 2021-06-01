@@ -4,7 +4,6 @@ const url_News = 'https://api.themoviedb.org/3/trending/all/day?api_key=f2fd763f
 
 $(document).ready(function() {
     fetch(url_News).then(Response => { return Response.json() }).then(data => {
-        console.log(data.results);
         var title = '';
         var date = '';
         data.results.forEach(movie => {

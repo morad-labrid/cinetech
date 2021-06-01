@@ -1,7 +1,6 @@
 let page = 1
 
 $(document).ready(function() {
-    console.log('ok');
 
     let url_News = 'https://api.themoviedb.org/3/movie/top_rated?api_key=f2fd763fba76bb7c9b8ce5ea49552e82&language=en-US&page=' + page;
     getMovies(url_News);

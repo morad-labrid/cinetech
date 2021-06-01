@@ -281,3 +281,33 @@ body {
     font-size: 13px !important;
     font-weight: lighter;
 }
+
+.form1 {
+    position: absolute;
+    top: 30px;
+    left: 35%;
+}
+
+.input-recherche1 {
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+    width: 250px;
+    height: 35px;
+}
+
+.liste-recherche1 {
+    border: 1px solid white;
+    background-color: black;
+    width: 250px;
+}
+
+.input-submit1 {
+    background-color: rgba(229, 9, 20, 0.9);
+    color: white;
+    border-radius: 5px;
+    width: 100px;
+    height: 35px;
+    /* outline: none; */
+    border: none;
+}
