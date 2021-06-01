@@ -43,6 +43,7 @@ $(document).ready(function() {
 
 
     fetch(url_acteur).then(Response => { return Response.json() }).then(data => {
+        console.log(data);
         for (let i = 0; i < 9; i++) {
             const movie = data.cast[i];
             var article = ` <nav>

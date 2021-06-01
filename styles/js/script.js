@@ -20,7 +20,6 @@ $("#connexion").click(function() {
             },
             success: function(data) {
                 data = JSON.parse(data);
-                console.log(data);
                 if (data.login == user) {
                     setCookie("id", data.id, 1)
                     setCookie("user", data.login, 1)
@@ -64,4 +63,12 @@ $("#inscription").click(function() {
         $("#response").html('Les mots de passes ne sont pas identiques')
     }
     $("#response").html('Remplissez tout les champs')
+})
+
+$('#deconnexion').click(function() {
+    document.cookie = "id=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    document.cookie = "user=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    document.cookie = "email=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    document.cookie = "password=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    $(location).attr('href', '../../../Cinetech/index.html');
 })

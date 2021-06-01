@@ -62,6 +62,8 @@ $cinetech = new cinetech();
             echo json_encode($send);
         }
         
+        if(isset($_POST['commentaire'])){
+            $commentaire = $_POST['commentaire'];
             $id = $_POST['id'];
             $cinetech->envoyercommentaire($_COOKIE['id'], $id, $commentaire, date('Y-m-d H:i:s'));
         };
@@ -81,6 +83,7 @@ $cinetech = new cinetech();
     <script src="../styles/js/scriptEnvoiecommentaire.js"></script>
     <script src="../styles/js/scriptAffichercommentaire.js"></script>
     <script src="../styles/js/scriptCommentaire.js"></script>
+    <script src="../styles/js/scriptRecherche.js"></script>
     <script src="../styles/js/scriptSimilaire.js "></script>
 </body>
 </html>

@@ -4,7 +4,6 @@ $(document).ready(function() {
     linktype = params.get('genre');
 
     $("#envoiecommentaire").click(function() {
-        console.log('btn ok');
         var commentaire = $("#commentaire").val();
         if (commentaire != '') {
             $.ajax({
@@ -15,9 +14,9 @@ $(document).ready(function() {
                     commentaire: commentaire
                 },
                 success: function(data) {
-                    console.log(ok);
                     data = JSON.parse(data);
                     $("#response").html(data)
+                    $("#commentaire").empty();
                 }
             })
         } else {

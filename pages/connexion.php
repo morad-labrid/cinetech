@@ -1,3 +1,8 @@
+<?php
+if(isset($_COOKIE['id'])){
+    header('location:profil.php');
+}
+?>
 <?php require 'head.php'?>
 <body>
 <?php require 'header.php'?>

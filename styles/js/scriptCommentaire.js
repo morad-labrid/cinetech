@@ -11,7 +11,6 @@ $(document).ready(function() {
 
     function getComment(url_News) {
         fetch(url_News).then(Response => { return Response.json() }).then(data => {
-            // console.log(data.results);
             var username = '';
             var content = '';
             let created = '';
