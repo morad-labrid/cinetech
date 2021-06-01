@@ -22,6 +22,12 @@ $(document).ready(function() {
             var time = '- ' + rhours + "h" + rminutes;
         }
 
+        var text = '';
+        if (getCookie('user')) {
+            text = '<i class="far fa-heart"></i> Ajouter a ma liste';
+            console.log('cookie oui');
+        }
+
         var titre = title.replace(/'/g, "\\'");
         var article = ` <div>
                             <img src="https://www.themoviedb.org/t/p/w1280${data.poster_path}" alt="Photo du film">
@@ -34,7 +40,7 @@ $(document).ready(function() {
                             <p class="description">${data.overview}</p>
                             <br><br><br>
                             <p>Réalisateur: ${data.production_companies[0].name}</p>
-                            <p class="addToListe" onclick="addwish('` + linkid + `','` + linktype + `')"><i class="far fa-heart"></i> Ajouter a ma liste<p>
+                            <p class="addToListe" onclick="addwish('` + linkid + `','` + linktype + `')">${text}<p>
                         </div>`;
         $('.movie').append(article);
     }).catch((error) => {
@@ -43,7 +49,6 @@ $(document).ready(function() {
 
 
     fetch(url_acteur).then(Response => { return Response.json() }).then(data => {
-        console.log(data);
         for (let i = 0; i < 9; i++) {
             const movie = data.cast[i];
             var article = ` <nav>
@@ -60,10 +65,23 @@ $(document).ready(function() {
 
 })
 
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
 
 function addwish(id, type) {
-    console.log('id: ' + id);
-    console.log('type: ' + type);
     $.ajax({
         url: '../pages/element.php',
         method: 'GET',
@@ -73,7 +91,7 @@ function addwish(id, type) {
             typeFilm: type
         },
         success: function(data) {
-            console.log(data);
+            $(location).attr('href', 'liste.php');
         }
     })
 }
