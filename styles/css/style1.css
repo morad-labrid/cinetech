@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: rgb(36, 36, 36);
+    background: linear-gradient(0deg, rgba(36, 36, 36, 1) 0%, rgba(21, 21, 21, 1) 60%);
+    color: white;
+}
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////  PROFIL.PHP */
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////// */
+
+.titre-profil {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 125px;
+}
+
+.mes-info,
+.ma-liste {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 72px;
+    color: #FFFFFF;
+}
+
+.case-profil {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.info {
+    width: 681px;
+    height: 416px;
+    left: 108px;
+    top: 368px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 16px;
+}
+
+.espace {
+    display: flex;
+    padding-left: 60px;
+    margin-top: 50px;
+}
+
+.nom-prenom-email {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 54px;
+}
+
+.information {
+    padding-left: 20px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 54px;
+}
+
+.form-button {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.button-info,
+.button-liste {
+    width: 306px;
+    height: 47px;
+    border: 1px solid black;
+    background: rgba(229, 9, 20, 0.9);
+    border-radius: 7px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 36px;
+    color: white;
+}
+
+.button-liste {
+    margin-top: 10px;
+}
+
+.liste {
+    width: 404px;
+    height: 416px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 16px;
+}
+
+.image-position {
+    /* margin-top: 10px; */
+    display: flex;
+    justify-content: center;
+}
+
+.mini-liste {
+    margin-top: 70px;
+    width: 306px;
+    height: 232px;
+}
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////  PROFIL.PHP */
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////// */
+
+.titre-connexion {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 72px;
+    color: #FFFFFF;
+}
+
+.section-connexion {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.cadre-connexion {
+    width: 529px;
+    height: 542px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 16px;
+}
+
+.cadre-connexion1 {
+    width: 500px;
+    height: 392px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 16px;
+}
+
+.form-connexion {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.ipt {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+
+.input-inscription {
+    margin-top: 35px;
+    width: 291px;
+    height: 55px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 6px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    color: #000000;
+}
+
+.input-inscription::placeholder {
+    text-align: center;
+}
+
+.input-valider {
+    margin-left: 10px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    width: 275px;
+    height: 47px;
+    background: rgba(229, 9, 20, 0.9);
+    border: 1px solid black;
+    border-radius: 5px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+.bas-cadre {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.mdp-oublier {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////  FILM.PHP */
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////// */
+
+.btn-page {
+    width: 125px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+
+.espace-btn {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 145px;
+}
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////  CONNEXION.PHP */
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////// */
+
+.response {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 50px;
+}
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////  ELEMENT.PHP */
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////// */
+
+.username-element {
+    font-size: 25px !important;
+    font-weight: bold !important;
+}
+
+.content-element {
+    font-size: 13px !important;
+    font-weight: lighter;
+}
+
+.form1 {
+    position: absolute;
+    top: 30px;
+    left: 35%;
+}
+
+.input-recherche1 {
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+    width: 250px;
+    height: 35px;
+}
+
+.liste-recherche1 {
+    border: 1px solid white;
+    background-color: black;
+    width: 250px;
+}
+
+.input-submit1 {
+    background-color: rgba(229, 9, 20, 0.9);
+    color: white;
+    border-radius: 5px;
+    width: 100px;
+    height: 35px;
+    /* outline: none; */
+    border: none;
+}

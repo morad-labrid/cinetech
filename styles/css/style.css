@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: rgb(36, 36, 36);
+    background: linear-gradient(0deg, rgba(36, 36, 36, 1) 0%, rgba(21, 21, 21, 1) 60%);
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+
+/******************** PAGE ELEMENT ********************/
+
+.element .movie {
+    display: flex;
+}
+
+.element .movie img {
+    width: 340px;
+    height: auto;
+    margin-right: 80px;
+}
+
+.element .movie .description {
+    width: 600px;
+    font-weight: 200;
+    font-size: 14px;
+}
+
+.element .movie .date {
+    font-weight: 200;
+    font-size: 14px;
+}
+
+.element .acteur {
+    background-color: black;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.element .acteur article {
+    padding-top: 20px;
+    margin-left: 70px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.element .acteur article nav {
+    margin: 0 40px;
+    width: 90px;
+}
+
+.nom-acteur {
+    text-align: center;
+}
+
+.element .acteur nav div:first-child {
+    width: 90px;
+    height: 90px;
+    border: 1px solid white;
+    background-position: top;
+    background-size: 100%;
+    border-radius: 10px;
+}
+
+.titre-acteurs {
+    margin-left: 40px;
+}
+
+.cadre-description {
+    margin-top: 60px;
+}
+
+.element .avis {
+    background: rgb(180, 72, 64);
+    background: linear-gradient(180deg, rgba(180, 72, 64, 1) 0%, rgba(21, 21, 21, 0) 100%);
+    padding: 40px 60px;
+}
+
+.element .avis div {
+    font-size: 12px;
+}
+
+.element #similaire {
+    padding: 0 6%;
+}
+
+.element section .articles {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.element section .articles article {
+    width: 250px;
+    background-color: #000000;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.element section .articles article img {
+    width: 100%;
+    height: 300px;
+}
+
+.element section .articles article div:last-child {
+    padding: 6px 20px;
+}
+
+
+/******************** PAGE LIST ********************/
+
+.sideBar {
+    width: 300px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.sideBar .filter {
+    border: 1px solid white;
+    padding: 10px 30px;
+    border-radius: 20px;
+    position: fixed;
+}
+
+input[type='checkbox'] {
+    position: relative;
+    width: 30px;
+    height: 15px;
+    -webkit-appearance: none;
+    background-color: #c6c6c6;
+    outline: none;
+    border-radius: 20px;
+    box-shadow: inset 0 0 2px 0 black;
+    transition: 1.2s;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+input[type='checkbox']:checked {
+    background-color: rgb(88, 211, 31);
+}
+
+input[type='checkbox']::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 0 2px 0 black;
+    transition: 0.6s;
+}
+
+input[type='checkbox']:checked:before {
+    left: 15px;
+}
+
+
+/* LIST START */
+
+.list {
+    display: flex;
+}
+
+.list .sidBarRight {
+    padding: 20px;
+    width: 100%;
+}
+
+.list section .articles {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.list section .articles article {
+    width: 250px;
+    background-color: #000000;
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 20px;
+}
+
+.list section .articles article img {
+    width: 100%;
+    height: 250px;
+}
+
+.list section .articles article div:last-child {
+    padding: 6px 20px;
+}
+
+.addToListe:hover {
+    cursor: pointer;
+    color: red;
+}
