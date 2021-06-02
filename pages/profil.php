@@ -50,7 +50,7 @@
             <div class="image-position">
                 <img class="mini-liste" src="../styles/img/image-liste.png" alt="image-de-liste">
             </div>
-            <form class="form-button" action="" method="">
+            <form class="form-button" action="liste.php" method="post">
                 <input class="button-liste" type="submit" value="accèder à ma liste">
             </form>
         </div>
