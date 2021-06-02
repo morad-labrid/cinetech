@@ -6,7 +6,8 @@
 
     if(isset($_POST['show'])){
         $data = $_POST['show'];
-        $json =  $selectWish = $wish->selectwish(5);
+        $id = $_COOKIE['id'];
+        $json =  $selectWish = $wish->selectwish($id);
         echo json_encode($json);
     }
 

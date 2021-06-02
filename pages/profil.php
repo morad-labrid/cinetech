@@ -41,9 +41,9 @@
                 <button class="button-info" id="deconnexion" name="deconnect">Déconnexion</button>
             </div>
             <?php
-                if(isset($_POST['deconnect'])){
-                    $cinetech->deconnect();
-                }
+                // if(isset($_POST['deconnect'])){
+                //     $cinetech->deconnect();
+                // }
             ?>
         </div>
         <div class="liste">

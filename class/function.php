@@ -130,7 +130,6 @@ class cinetech
 
         public function selectwish($idUser)
         {
-            $idUser = 5;
             $select = $this->_db->prepare('SELECT * FROM `favoris` WHERE id_user=:id');
             $select -> bindParam('id', $idUser);
             $select -> execute();
